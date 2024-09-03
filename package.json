@@ -1,0 +1,12 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "keccak": "^3.0.4",
+    "merkletreejs": "^0.4.0"
+  }
+}

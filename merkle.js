@@ -8,7 +8,7 @@ import keccak from 'keccak';
 
 
 const csvFilePath = `./airdropnew.csv`;
-//const searchAddress = "0x156abc37d75aad4f4a7b1016ef4ba5d75d7dc410"; //Address to search
+const searchAddress = "0x92e827f125f746778b636e06e7bd8efac166b443"; //Address to search
 
 // Function to hash asingle entry using keccak256
 // function hashEntry(address, amount) {
@@ -28,17 +28,11 @@ async function readCSV(csvFilePath) {
     .on('data',(row) => {
         values.push([row.address, row.amount])
         //const {address, amount} = row;
-       // const amountBigInt = BigInt(amount); //convert the string amount into BigInt
-        //Hash each entry and convert to buffer
-        //const hashedEntry = hashEntry(address, amountBigInt);
-        //leaves.push(hashedEntry);
+       
     })
     .on('end', () => {
         //Construct the Merkle Tree
-        //const merkleTree = new MerkleTree(leaves, keccak, {sortPairs: true});
-        //const merkleRoot = merkleTree.getRoot().toString('hex');
 
-        //console.log('Merkle Root:', merkleRoot);
         resolve(values);
     })
     .on('error', reject);
